@@ -26,30 +26,30 @@ Folder Content:
 
   Multi-label classification
 
-  1. Preprocess X-rays images by cropping, removing blacklist, and loading images as size 300 * 300. Then using pre-trained model      DenseNet169 in keras with modified densely connect layer to train model. Use Adam as opitmizer.
+    1. Preprocess X-rays images by cropping, removing blacklist, and loading images as size 300 * 300. Then using pre-trained model         DenseNet169 in keras with modified densely connect layer to train model. Use Adam as opitmizer.
   
-  preprocess: nit-preprocess-multi-crop-noBlack.ipynb
-  train-model: model-100%300CropRemoveBlack-169-AdamBest.ipynb
-  weights: 300Crop169Adam.hdf5
+    preprocess: nit-preprocess-multi-crop-noBlack.ipynb
+    train-model: model-100%300CropRemoveBlack-169-AdamBest.ipynb
+    weights: 300Crop169Adam.hdf5
 
 
-  2. Same as 1, except using SGD as optimizer.
+    2. Same as 1, except using SGD as optimizer.
   
-  preprocess: nit-preprocess-multi-crop-noBlack.ipynb
-  train-model: model-100%300CropRemoveBlack-169-SGD.ipynb
-  weights: 300Crop169SGD.hdf5
+    preprocess: nit-preprocess-multi-crop-noBlack.ipynb
+    train-model: model-100%300CropRemoveBlack-169-SGD.ipynb
+    weights: 300Crop169SGD.hdf5
   
-  3. Same as 1, except oversample under-represented samples. Oversampling details is in preprocess file. 
+    3. Same as 1, except oversample under-represented samples. Oversampling details is in preprocess file. 
   
-  preprocess: nit-preprocess-multi-crop-noBlack-balanced.ipynb
-  train-model: model-100%300CropRemoveBlack-169-SGD-balanced.ipynb
-  weights: 300Crop169SGDbalanced.hdf5
+    preprocess: nit-preprocess-multi-crop-noBlack-balanced.ipynb
+    train-model: model-100%300CropRemoveBlack-169-SGD-balanced.ipynb
+    weights: 300Crop169SGDbalanced.hdf5
   
-  4.Drop out 'No Finding' Class and train on the remaining samples. 
+    4. Drop out 'No Finding' Class and train on the remaining samples. 
   
-  preprocess: nit-preprocess-disease-712.ipynb
-  train-model: model-mulitlabel-diseaseOnly-712.ipynb
-  weights: multilabel_diseaseOnly712.hdf5
+    preprocess: nit-preprocess-disease-712.ipynb
+    train-model: model-mulitlabel-diseaseOnly-712.ipynb
+    weights: multilabel_diseaseOnly712.hdf5
   
   
   
